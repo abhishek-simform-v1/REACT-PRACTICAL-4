@@ -16,11 +16,11 @@ type props = {
   hoverData: DummyDataInter;
 };
 import { memo } from "react";
-
+import { motion } from "framer-motion";
 const Card = (props: props) => {
   const data = props.hoverData;
   return (
-    <div className="hoverCard">
+    <motion.div className="hoverCard">
       <div className="hoverCard-image">
         <img src={data.avatar} />
       </div>
@@ -64,7 +64,7 @@ const Card = (props: props) => {
           <p className="hoverCard-click-text">Monthly clicks</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
